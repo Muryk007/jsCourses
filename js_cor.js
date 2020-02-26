@@ -1,4 +1,35 @@
-'use strict'
+"use strict"
+
+// Задание №0 (По 3 переменных с let, var, const)
+
+const myFirstName = 'Oleh';
+const mySecondName = 'Muratov';
+const piNumber = 3.14159;
+
+let busTicketPrice = 10;
+let metroTiketPrice = 8;
+let myLaptop = 'ASUS';
+
+var sandColor =  '#f9ff33';
+var dollarRate = 24.45;
+var ourCountry = 'Ukraine';
+
+// Задание №1 (Вывести нечетное число)
+
+let firstNumber = prompt ('Введите первое число!');
+let secondNumber = prompt ('Введите второе число!');
+
+if (firstNumber % 2 !== 0 && secondNumber % 2 !== 0) {
+    alert (`${firstNumber} and ${secondNumber}`) 
+} else {
+        if (firstNumber % 2 !== 0) {
+            alert (firstNumber)
+        } else if (secondNumber % 2 !== 0) {
+            alert (secondNumber)
+        } else {
+            alert ('Try again!') // Можно было еще вставить проверку на нечисло
+        }
+}
 
 // Задача №2 (вывести кол-во дней в году)
 
