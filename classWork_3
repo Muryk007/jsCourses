@@ -1,0 +1,69 @@
+'use strict'
+
+let someMonth = 9;
+
+switch (someMonth){
+    case 1:
+    break;
+    case 2:
+    break;
+    case 3:
+    break;
+    case 4:
+    break;
+    case 5:
+    break;
+    case 6:
+    break;
+    case 7:
+    break;
+    case 8:
+    break;
+    case 9:
+        console.log ('September')
+    break;
+    case 10:
+    break;
+    case 11:
+    break;
+    case 12:
+    break;
+};
+
+/*try {
+
+}
+catch () {
+
+}*/
+
+
+/*let fizzBuzz = +prompt ('Enter value')
+
+if (isNaN(fizzBuzz) || fizzBuzz > 100 || fizzBuzz == 0) {
+    alert ('no, from 1 to 100')
+} else if (fizzBuzz%3==0) {
+    alert ('Fizz')
+} else if (fizzBuzz%5==0) {
+    alert ('Buzz')
+} else if (fizzBuzz%3!=0 && fizzBuzz%5!=0) {
+    alert ('FizzBuzz')
+} */
+
+
+/*
+switch () {
+    case:
+    break;
+}
+*/
+
+
+let bigSmile = ':)';
+let smile = '';
+
+for (let i=0; i<=5; i++) {
+    smile = smile+bigSmile;
+    console.log (smile);
+    
+}
