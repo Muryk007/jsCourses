@@ -274,21 +274,35 @@ summaChisel.onclick = function () {
         } alert (sumAnyNum)
     };
 
-//Ex #11
+//Ex #11 не разрывается цикл
     let knopka = document.getElementById ('knopka');
       
-    for (let i=0; i<3; i++) {
-        knopka.onclick = function () {
+    knopka.onclick = function () {  
+        let i = 0;
+        for (i=0; i<3; i++) {
             let otgadka = prompt ('Введите ответ');
-            if (otgadka.value = 'Сдаюсь') break;
-            if (otgadka.value = "Троллейбус") {
-            alert ('Это провильный овет')
-            } else  {
-                alert ('Подумайте еще');
-            }
-        }
-        if (i == 3) break;
-    };  
+            
+            
+            /*if (otgadka ='Сдаюсь') {
+                break;
+            } else if (otgadka = "Троллейбус") {
+              alert ('Это провильный овет');
+              break;
+            } else {
+              alert ('Подумайте еще');
+            };*/
+            switch (otgadka) {
+                case 'Троллейбус':
+                    console.log ('Правильно!');
+                    break;
+                case 'Сдаюсь':
+                    console.log ('Ваше право!');
+                    break;
+                default:
+                    console.log ('Подумайте еще!');
+            };
+        };    
+    };
 
 // Ex #12
 
