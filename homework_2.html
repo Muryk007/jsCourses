@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <table class="cal" id="table">
+          <caption>
+            <span class="prev"><a href="#">←</a></span>
+            <span class="next"><a href="#">→</a></span>
+            March 2020
+          </caption>
+          <thead>
+            <tr>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="off"><a href="#">24</a></td>
+              <td class="off"><a href="#">25</a></td>
+              <td class="off"><a href="#">26</a></td>
+              <td class="off"><a href="#">27</a></td>
+              <td class="off"><a href="#">28</a></td>
+              <td class="off"><a href="#">29</a></td>
+              <td><a href="#">1</a></td>
+            </tr>
+            <tr>
+              <td class="active"><a href="#">2</a></td>
+              <td><a href="#">3</a></td>
+              <td><a href="#">4</a></td>
+              <td><a href="#">5</a></td>
+              <td><a href="#">6</a></td>
+              <td><a href="#">7</a></td>
+              <td><a href="#">8</a></td>
+            </tr>
+            <tr>
+              <td><a href="#">9</a></td>
+              <td><a href="#">10</a></td>
+              <td><a href="#">11</a></td>
+              <td><a href="#">12</a></td>
+              <td><a href="#">13</a></td>
+              <td><a href="#">14</a></td>
+              <td><a href="#">15</a></td>
+            </tr>
+            <tr>
+              <td><a href="#">16</a></td>
+              <td><a href="#">17</a></td>
+              <td><a href="#">18</a></td>
+              <td><a href="#">19</a></td>
+              <td><a href="#">20</a></td>
+              <td><a href="#">21</a></td>
+              <td><a href="#">22</a></td>
+            </tr>
+            <tr>
+              <td><a href="#">23</a></td>
+              <td><a href="#">24</a></td>
+              <td><a href="#">25</a></td>
+              <td><a href="#">26</a></td>
+              <td><a href="#">27</a></td>
+              <td><a href="#">28</a></td>
+              <td><a href="#">29</a></td>
+            </tr>
+            <tr>
+              <td><a href="#">30</a></td>
+              <td><a href="#">31</a></td>
+              <td class="off"><a href="#">1</a></td>
+              <td class="off"><a href="#">2</a></td>
+              <td class="off"><a href="#">3</a></td>
+              <td class="off"><a href="#">4</a></td>
+              <td class="off"><a href="#">5</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<!-- Хотел подвязать нажатие на день в календаре, но не успел.-->
+<!-- Задание №0 (OK)-->      
+    <div class="input">
+      <p style="color: antiquewhite;">Задание №0</p>
+        <h3 style="color: antiquewhite;">Введите число месяца</h3>
+        <input type="text" size="2" id="inpDate">
+        <button id="button">Обработать информацию</button>
+    </div>
+
+    
+<!-- Задание №1 (OK)-->    
+    <div>
+        <hr>
+        <p style="color: antiquewhite;">Задание №1</p>
+        <label for="code" style="color: antiquewhite;">Введите код города:</label>
+        <input type="text" id="code">
+        <button id="putCode">Обработать информацию</button>
+        <hr>
+    </div>
+
+
+<!-- Задание №2 (ОК)-->    
+    <div>
+        <hr>
+        <p style="color: antiquewhite;">Задание №2</p>
+        <label for="quoter" style="color: antiquewhite;">Введите число:</label>
+        <input type="text" id="quoter">
+        <button id="putNumber">Узнать к какой четверти относится</button>
+        <hr>
+    </div>
+
+
+
+<!-- Задание №3 (OK)-->   
+    <div>
+      <hr>
+      <p style="color: antiquewhite;">Задание №3</p>
+      <label for="inpValue" style="color: antiquewhite;">Введите число:</label>
+      <input type="text" id="inpValue">
+      <button id="confValue">Узнать время года</button>
+      <hr>
+    </div>
+
+  
+<!-- Задание №4 (OK)--> 
+    <div>
+      <hr>
+      <p style="color: antiquewhite;">Задание №4</p>
+      <p style="color: antiquewhite;">Вычисляем площадь прямоугольника</p>
+      <label for="hight" style="color: antiquewhite;"> Введите высоту</label>
+      <input type="text" id="inpHight">
+      <label for="width" style="color: antiquewhite;"> Введите ширину</label>
+      <input type="text" id="inpWidth">
+      <button id="proccess"> Вычислить площадь</button>
+      <hr>
+    </div>
+
+
+<!-- Задание №4 (1) (OK)--> 
+  <div>
+  <hr>
+    <p style="color: antiquewhite;">Задание №4 (1)</p>
+    <p style="color: antiquewhite;">Вычисляем обьем цилиндра</p>
+    <label for="hightCl" style="color: antiquewhite;"> Введите высоту</label>
+    <input type="text" id="hightCl">
+    <label for="diamCl" style="color: antiquewhite;"> Введите диаметр</label>
+    <input type="text" id="diamCl">
+    <button id="procCl"> Вычислить обьем</button>
+    <hr>
+  </div>
+
+
+<!-- Задание № 4 (2) (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №4 (2)</p>
+    <p style="color: antiquewhite;">Найти гипотензу примоугольного треугольника</p>
+    <label for="katetOne" style="color: antiquewhite;"> Введите сторону №1 </label>
+    <input type="text" id="katetOne">
+    <label for="katetTwo" style="color: antiquewhite;"> Введите сторону №2 </label>
+    <input type="text" id="katetTwo">
+    <button id="gipoten"> Вычислить гипотенузу </button>
+    <hr>
+  </div>
+
+
+<!-- Задание № 4 (4) (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №4 (4)</p>
+    <p style="color: antiquewhite;">Найти сумму переплаты по кредиту</p>
+    <label for="kredit" style="color: antiquewhite;"> Введите сумму кредита </label>
+    <input type="text" id="kredit">
+    <label for="percents" style="color: antiquewhite;"> Введите процентную ставку </label>
+    <input type="text" id="percents">
+    <label for="years" style="color: antiquewhite;"> Введите количество лет </label>
+    <input type="text" id="years">
+    <button id="proschet"> Высчитать переплату </button>
+    <hr>
+  </div>
+
+<!-- Задание №5 (1) (OK)--> 
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №5 (1) вывод в консоли </p>
+    <button id="cicle"> Запустить скрипт</button>
+    <hr>
+  </div>
+
+  
+<!-- Задание №5 (2) ( выводит (9)false и (1)true )--> 
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №5 (2) вывод в консоли </p>
+    <button id="cicle2"> Запустить скрипт</button>
+    <hr>
+  </div>
+
+
+<!-- Задание № 6 (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №6</p>
+    <p style="color: antiquewhite;">Найти сумму четных чисел</p>
+    <label for="chislo" style="color: antiquewhite;"> Введите число </label>
+    <input type="text" id="chislo">
+    <button id="summaChisel"> Расчитать сумму </button>
+    <hr>
+  </div>
+
+
+<!-- Задание № 7 (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №7</p>
+    <p style="color: antiquewhite;">Калькулятор</p>
+    <label for="culcNumOne" style="color: antiquewhite;"> Введите число: </label>
+    <input type="text" id="culcNumOne">
+    <label for="culcSimbol" style="color: antiquewhite;"> Укажите операцию: </label>
+    <input type="text" id="culcSimbol">
+    <label for="culcNumTwo" style="color: antiquewhite;"> Введите число: </label>
+    <input type="text" id="culcNumTwo">
+    <button id="culculate"> Рассчитать </button>
+    <label for="result" style="color: antiquewhite;"> Результат: </label>
+    <input type="text" id="result">
+    <hr>
+  </div>
+
+  
+<!-- Задание № 8 (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №8</p>
+    <p style="color: antiquewhite;">Найти сумму нечетных чисел</p>
+    <label for="chis" style="color: antiquewhite;"> Введите число </label>
+    <input type="text" id="chis">
+    <button id="summaChis"> Расчитать сумму </button>
+    <hr>
+  </div>
+
+
+<!-- Задание № 9 (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №9</p>
+    <p style="color: antiquewhite;">Таблица умножения</p>
+    <label for="umnoz" style="color: antiquewhite;"> Введите число </label>
+    <input type="text" id="umnoz">
+    <button id="tableUmnoz"> Расчитать </button>
+    <p style="color: antiquewhite;">Результат</p>
+    <p><textarea name="umnozenie" cols="40" rows="3" id="otvet"></textarea></pРез<textarea>
+    <hr>
+  </div>
+
+
+<!-- Задание № 10 (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №10</p>
+    <p style="color: antiquewhite;">Введите любое целое положительное число</p>
+    <label for="anyNum" style="color: antiquewhite;"> Введите число </label>
+    <input type="text" id="anyNum">
+    <button id="countAnyNum"> Расчитать </button>
+    <hr>
+  </div>
+
+
+<!-- Задание № 11 ()-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №10</p>
+    <p style="color: antiquewhite;">Загадка: Автобус которому изменила жена.</p>
+  
+    <button id="knopka"> Готовы отвечать? </button>
+    <hr>
+  </div>
+
+
+<!-- Задание № 12 ()-->
+
+<!-- Задание № 13 (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №13</p>
+   <p style="color: antiquewhite;">Нахождение факториала числа</p>
+   <label for="facNum" style="color: antiquewhite;"> Введите число </label>
+    <input type="text" id="facNum">
+    <button id="proccessNum"> Раcсчитать </button>
+   <hr>
+  </div>
+
+
+<!-- Задание № 14 (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №14</p>
+    <p style="color: antiquewhite;">Возведение числа в  10 степень</p>
+    <label for="numStepen" style="color: antiquewhite;"> Введите число </label>
+    <input type="text" id="numStepen">
+    <button id="proccessStepen"> Раcсчитать </button>
+    <hr>
+  </div>
+
+
+<script src = "dz233.js"></script>    
+</body>
+</html>
