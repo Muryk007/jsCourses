@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <table class="cal" id="table">
+          <caption>
+            <span class="prev"><a href="#">←</a></span>
+            <span class="next"><a href="#">→</a></span>
+            March 2020
+          </caption>
+          <thead>
+            <tr>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="off"><a href="#">24</a></td>
+              <td class="off"><a href="#">25</a></td>
+              <td class="off"><a href="#">26</a></td>
+              <td class="off"><a href="#">27</a></td>
+              <td class="off"><a href="#">28</a></td>
+              <td class="off"><a href="#">29</a></td>
+              <td><a href="#">1</a></td>
+            </tr>
+            <tr>
+              <td class="active"><a href="#">2</a></td>
+              <td><a href="#">3</a></td>
+              <td><a href="#">4</a></td>
+              <td><a href="#">5</a></td>
+              <td><a href="#">6</a></td>
+              <td><a href="#">7</a></td>
+              <td><a href="#">8</a></td>
+            </tr>
+            <tr>
+              <td><a href="#">9</a></td>
+              <td><a href="#">10</a></td>
+              <td><a href="#">11</a></td>
+              <td><a href="#">12</a></td>
+              <td><a href="#">13</a></td>
+              <td><a href="#">14</a></td>
+              <td><a href="#">15</a></td>
+            </tr>
+            <tr>
+              <td><a href="#">16</a></td>
+              <td><a href="#">17</a></td>
+              <td><a href="#">18</a></td>
+              <td><a href="#">19</a></td>
+              <td><a href="#">20</a></td>
+              <td><a href="#">21</a></td>
+              <td><a href="#">22</a></td>
+            </tr>
+            <tr>
+              <td><a href="#">23</a></td>
+              <td><a href="#">24</a></td>
+              <td><a href="#">25</a></td>
+              <td><a href="#">26</a></td>
+              <td><a href="#">27</a></td>
+              <td><a href="#">28</a></td>
+              <td><a href="#">29</a></td>
+            </tr>
+            <tr>
+              <td><a href="#">30</a></td>
+              <td><a href="#">31</a></td>
+              <td class="off"><a href="#">1</a></td>
+              <td class="off"><a href="#">2</a></td>
+              <td class="off"><a href="#">3</a></td>
+              <td class="off"><a href="#">4</a></td>
+              <td class="off"><a href="#">5</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<!-- Хотел подвязать нажатие на день в календаре, но не успел.-->
+<!-- Задание №0 (OK)-->      
+    <div class="input">
+      <p style="color: antiquewhite;">Задание №0</p>
+        <h3 style="color: antiquewhite;">Введите число месяца</h3>
+        <input type="text" size="2" id="inpDate">
+        <button id="button">Обработать информацию</button>
+    </div>
+    
+<!-- Задание №1 (OK)-->    
+    <div>
+        <hr>
+        <p style="color: antiquewhite;">Задание №1</p>
+        <label for="code" style="color: antiquewhite;">Введите код города:</label>
+        <input type="text" id="code">
+        <button id="putCode">Обработать информацию</button>
+        <hr>
+    </div>
+
+<!-- Задание №2 (ОК)-->    
+    <div>
+        <hr>
+        <p style="color: antiquewhite;">Задание №2</p>
+        <label for="quoter" style="color: antiquewhite;">Введите число:</label>
+        <input type="text" id="quoter">
+        <button id="putNumber">Узнать к какой четверти относится</button>
+        <hr>
+    </div>
+    <script>
+      let quoter = document.getElementById ('quoter');
+      let putNumber = document.getElementById ('putNumber');
+
+      putNumber.onclick = function () {
+        let $min = quoter.value;
+        if (isNaN($min) || $min == '') {
+            alert ('Введите число от 0 до 59')
+        } else if ($min  == 0 || $min <= 14) {
+            alert ('Число относится к 1й четверти')
+        } else if ($min == 15 || $min <= 29) {
+            alert ('Число относится к 2й четверти')
+        } else if ($min == 30 || $min <= 44) {
+            alert ('Число относится к 3й четверти')
+        } else if ($min == 45 || $min <= 59) {
+            alert ('Число относится к 4й четверти')
+        }
+      };
+
+    </script>
+
+
+<!-- Задание №3 (OK)-->   
+      <div>
+        <hr>
+        <p style="color: antiquewhite;">Задание №3</p>
+        <label for="inpValue" style="color: antiquewhite;">Введите число:</label>
+        <input type="text" id="inpValue">
+        <button id="confValue">Узнать время года</button>
+        <hr>
+      </div>
+      <script>
+        let inpValue = document.getElementById ('inpValue');
+        let confValue = document.getElementById ('confValue');
+
+        confValue.onclick = function () {
+        let num = inpValue.value;
+          if (num == '4') {
+            alert ('Winter')
+          } else if (num == '3') {
+            alert ('Spring')
+          } else if (num == '2') {
+            alert ('Summer')
+          } else if (num == '1') {
+            alert ('Autumn')
+          } else {
+            alert ('Input value from 1 to 4')
+          }
+        }
+      </script>
+  
+<!-- Задание №4 (OK)--> 
+    <div>
+      <hr>
+      <p style="color: antiquewhite;">Задание №4</p>
+      <p style="color: antiquewhite;">Вычисляем площадь прямоугольника</p>
+      <label for="hight" style="color: antiquewhite;"> Введите высоту</label>
+      <input type="text" id="inpHight">
+      <label for="width" style="color: antiquewhite;"> Введите ширину</label>
+      <input type="text" id="inpWidth">
+      <button id="proccess"> Вычислить площадь</button>
+      <hr>
+    </div>
+    <script>
+      let inpHight = document.getElementById ('inpHight');
+      let inpWidth = document.getElementById ('inpWidth');
+      let proccess = document.getElementById ('proccess');
+
+      proccess.onclick = function () {
+        let hight = inpHight.value;
+        let width = inpWidth.value;
+        let square = (hight*width);
+        if (isNaN(hight) || isNaN(width)) {
+          alert ('Допускаются только числа')
+        } else {
+          alert (`Площадь равна  ${square}`);
+        }
+      }      
+    </script>
+
+<!-- Задание №4 (1) (OK)--> 
+  <div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №4 (1)</p>
+  <p style="color: antiquewhite;">Вычисляем обьем цилиндра</p>
+  <label for="hightCl" style="color: antiquewhite;"> Введите высоту</label>
+  <input type="text" id="hightCl">
+  <label for="diamCl" style="color: antiquewhite;"> Введите диаметр</label>
+  <input type="text" id="diamCl">
+  <button id="procCl"> Вычислить обьем</button>
+  <hr>
+  </div>
+  <script>
+  let hightCl = document.getElementById ('hightCl');
+  let diamCl = document.getElementById ('diamCl');
+  let procCl = document.getElementById ('procCl');
+
+  procCl.onclick = function () {
+    let hight = hightCl.value;
+    let diam = diamCl.value;
+    let radCl = (diam/2);
+    let pi = (3.14);
+    let doubleRad = (Math.pow (radCl, 2));
+    let obCl = (pi*doubleRad*hight);
+    
+    if (isNaN(hight) || isNaN(diam)) {
+      alert ('Допускаются только числа')
+    } else {
+      alert (`Обьем равен  ${obCl}`)
+    }
+  };
+  </script>
+
+<!-- Задание № 4 (2) (OK)-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №4 (2)</p>
+  <p style="color: antiquewhite;">Найти гипотензу примоугольного треугольника</p>
+  <label for="katetOne" style="color: antiquewhite;"> Введите сторону №1 </label>
+  <input type="text" id="katetOne">
+  <label for="katetTwo" style="color: antiquewhite;"> Введите сторону №2 </label>
+  <input type="text" id="katetTwo">
+  <button id="gipoten"> Вычислить гипотенузу </button>
+  <hr>
+  </div>
+  <script>
+    let katetOne = document.getElementById ('katetOne');
+    let katetTwo = document.getElementById ('katetTwo');
+    let gipoten = document.getElementById ('gipoten');
+
+    gipoten.onclick = function () {
+      let squareKetetOne = (Math.pow (katetOne.value, 2));
+      let squareKatetTwo = (Math.pow (katetTwo.value, 2));
+      let squareGipoten = (squareKatetTwo+squareKetetOne);
+
+      if (isNaN(squareKetetOne) || isNaN(squareKatetTwo)) {
+        alert ('Вводите только числа')
+      } else {   
+        alert ((Math.sqrt(squareGipoten)).toFixed(2))
+      }
+    };
+  </script>
+
+<!-- Задание № 4 (4) (OK)-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №4 (4)</p>
+  <p style="color: antiquewhite;">Найти сумму переплаты по кредиту</p>
+  <label for="kredit" style="color: antiquewhite;"> Введите сумму кредита </label>
+  <input type="text" id="kredit">
+  <label for="percents" style="color: antiquewhite;"> Введите процентную ставку </label>
+  <input type="text" id="percents">
+  <label for="years" style="color: antiquewhite;"> Введите количество лет </label>
+  <input type="text" id="years">
+  <button id="proschet"> Высчитать переплату </button>
+  <hr>
+  </div>
+  <script>
+    let kredit = document.getElementById ('kredit');
+    let percents = document.getElementById ('percents');
+    let years = document.getElementById ('years');
+    let proschet = document.getElementById ('proschet');
+
+    proschet.onclick = function () {
+      let percKredit = (percents.value/100);
+      let allYears = ((Number(kredit.value)+(Number(kredit.value)*Number(percKredit)*Number(years.value))));
+      let perplata = (allYears-Number(kredit.value));
+
+      if (isNaN(percKredit) || isNaN(allYears)) {
+        alert ('Вводите только числа')
+      } else {
+        alert (perplata)
+      }
+    };
+  </script>
+
+<!-- Задание №5 (1) (OK)--> 
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №5 (1) вывод в консоли </p>
+    <button id="cicle"> Запустить скрипт</button>
+    <hr>
+  </div>
+  <script>
+    let butCicle = document.getElementById('cicle');
+    butCicle.onclick = function () {
+      let i=45;
+      let outPut = ('');
+      while (i<68) {
+        console.log (outPut+i);
+        i++;
+      }
+    };
+  </script>
+  
+<!-- Задание №5 (2) ( выводит (9)false и (1)true )--> 
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №5 (2) вывод в консоли </p>
+    <button id="cicle2"> Запустить скрипт</button>
+    <hr>
+  </div>
+  <script>
+    let butCicle2 = document.getElementById('cicle2');
+    butCicle2.onclick = function () {
+      let i = 45;
+      let outPut2 = ('');
+      while (i <= 670) {  
+        outPut2 = (i % 10 == 0);
+        console.log(outPut2);
+        i++;
+      }
+    };  
+  </script>
+
+<!-- Задание № 6 (OK)-->
+  <div>
+    <hr>
+    <p style="color: antiquewhite;">Задание №6</p>
+    <p style="color: antiquewhite;">Найти сумму четных чисел</p>
+    <label for="chislo" style="color: antiquewhite;"> Введите число </label>
+    <input type="text" id="chislo">
+    <button id="summaChisel"> Расчитать сумму </button>
+    <hr>
+    </div>
+    <script>
+      let chislo = document.getElementById ('chislo');
+      let summaChisel = document.getElementById ('summaChisel');
+
+      summaChisel.onclick = function () {
+        let nums = chislo.value
+        let sumChi = 0;
+
+        for (let value of nums) {
+          let temp = Number (value);
+          if (temp%2 == 0) {
+            sumChi +=temp
+          }
+        } alert (sumChi);
+      };
+    </script>
+
+<!-- Задание № 7 (OK)-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №7</p>
+  <p style="color: antiquewhite;">Калькулятор</p>
+  <label for="culcNumOne" style="color: antiquewhite;"> Введите число: </label>
+  <input type="text" id="culcNumOne">
+  <label for="culcSimbol" style="color: antiquewhite;"> Укажите операцию: </label>
+  <input type="text" id="culcSimbol">
+  <label for="culcNumTwo" style="color: antiquewhite;"> Введите число: </label>
+  <input type="text" id="culcNumTwo">
+  <button id="culculate"> Рассчитать </button>
+  <label for="result" style="color: antiquewhite;"> Результат: </label>
+  <input type="text" id="result">
+  <hr>
+  </div>
+  <script>
+    let culcNumOne = document.getElementById ('culcNumOne');
+    let culcSimbol = document.getElementById ('culcSimbol');
+    let culcNumTwo = document.getElementById ('culcNumTwo');
+    let culculate = document.getElementById ('culculate');
+    let result = document.getElementById ('result');
+
+    culculate.onclick = function () {
+      let getFirstNum = culcNumOne.value;
+      let getSecondNum = culcNumTwo.value;
+      let simbol = culcSimbol.value;
+      
+      if (isNaN(getFirstNum) || isNaN(getSecondNum)) {
+        alert ('Вводите числа')
+      } else if (simbol == '+' ) {
+        result.value = +getFirstNum + +getSecondNum;
+      } else if (simbol == '-' ) {
+        result.value = +getFirstNum - +getSecondNum;
+      } else if (simbol == '/' ) {
+        if (getFirstNum == '0' || getSecondNum == '0') {
+          alert ('На ноль делить нельзя');
+        }
+        result.value = +getFirstNum / +getSecondNum;
+      } else if (simbol == '*' ) {
+        result.value = +getFirstNum * +getSecondNum;
+      } else {
+        alert ('Введите математическую операцию')
+      }
+    }
+
+  </script>
+  
+<!-- Задание № 8 (OK)-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №8</p>
+  <p style="color: antiquewhite;">Найти сумму нечетных чисел</p>
+  <label for="chis" style="color: antiquewhite;"> Введите число </label>
+  <input type="text" id="chis">
+  <button id="summaChis"> Расчитать сумму </button>
+  <hr>
+  </div>
+  <script>
+    let chis = document.getElementById ('chis');
+    let summaChis = document.getElementById ('summaChis');
+
+    summaChis.onclick = function () {
+      let numb = chis.value
+      let sumCh = 0;
+
+      for (let value of numb) {
+        let tempo = Number (value);
+        if (tempo%2 != 0) {
+          sumCh +=tempo
+        }
+      } alert (sumCh);
+    };
+  </script>
+
+<!-- Задание № 9 (OK)-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №9</p>
+  <p style="color: antiquewhite;">Таблица умножения</p>
+  <label for="umnoz" style="color: antiquewhite;"> Введите число </label>
+  <input type="text" id="umnoz">
+  <button id="tableUmnoz"> Расчитать </button>
+  <p style="color: antiquewhite;">Результат</p>
+  <p><textarea name="umnozenie" cols="40" rows="3" id="otvet"></textarea></pРез<textarea>
+  <hr>
+</div>
+<script>
+    let umnoz = document.getElementById ('umnoz');
+    let tableUmnoz = document.getElementById ('tableUmnoz');
+    
+
+    tableUmnoz.onclick = function () {
+      let mnozitel = umnoz.value;
+      let itog = ('');
+      for (i = 1; i<=10; i++) {
+      itog = itog+mnozitel+ '*' +i+ '=' +mnozitel*i +'   ';
+      }
+      
+      document.getElementById ('otvet').innerHTML=itog;
+      
+    }
+</script>
+
+<!-- Задание № 10 (OK)-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №10</p>
+  <p style="color: antiquewhite;">Введите любое целое положительное число</p>
+  <label for="anyNum" style="color: antiquewhite;"> Введите число </label>
+  <input type="text" id="anyNum">
+  <button id="countAnyNum"> Расчитать </button>
+  <hr>
+</div>
+<script>
+  let anyNum = document.getElementById ('anyNum');
+  let countAnyNum = document.getElementById ('countAnyNum');
+
+  countAnyNum.onclick = function () {
+      let sumAnyNum = 0;
+    for (i=1; i<=anyNum.value; i++ ) {
+      sumAnyNum = sumAnyNum + i;
+    }
+    alert (sumAnyNum)
+  }
+</script>
+
+<!-- Задание № 11 ()-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №10</p>
+  <p style="color: antiquewhite;">Загадка: Автобус которому изменила жена.</p>
+  
+  <button id="knopka"> Готовы отвечать? </button>
+  <hr>
+  </div>
+  <script>
+    let knopka = document.getElementById ('knopka');
+      
+    for (i=0; i<3; i++) {
+      knopka.onclick = function () {
+        let otgadka = prompt ('Введите ответ');
+        if (otgadka.value = 'Сдаюсь') break;
+        if (otgadka.value = "Троллейбус") {
+          alert ('Это провильный овет')
+        } else  {
+          alert ('Подумайте еще');
+        }
+      };
+      if (i == 3) break;
+    };  
+
+    
+  </script>
+
+<!-- Задание № 12 ()-->
+
+
+
+<!-- Задание № 13 (OK)-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №13</p>
+  <p style="color: antiquewhite;">Нахождение факториала числа</p>
+  <label for="facNum" style="color: antiquewhite;"> Введите число </label>
+  <input type="text" id="facNum">
+  <button id="proccessNum"> Раcсчитать </button>
+  <hr>
+</div>
+<script>
+  let facNum = document.getElementById ('facNum');
+  let proccessNum = document.getElementById ('proccessNum');
+
+  proccessNum.onclick = function () {
+    let factorial = 1;
+    for (i=1; i<=facNum.value; i++) {
+      factorial = factorial*i;
+    }
+    alert (factorial);
+  }
+</script>
+
+<!-- Задание № 14 (OK)-->
+<div>
+  <hr>
+  <p style="color: antiquewhite;">Задание №14</p>
+  <p style="color: antiquewhite;">Возведение числа в  10 степень</p>
+  <label for="numStepen" style="color: antiquewhite;"> Введите число </label>
+  <input type="text" id="numStepen">
+  <button id="proccessStepen"> Раcсчитать </button>
+  <hr>
+</div>
+<script>
+  let numStepen = document.getElementById ('numStepen');
+  let proccessStepen = document.getElementById ('proccessStepen');
+
+  proccessStepen.onclick = function () {
+    let numIn = numStepen.value;
+    for (i=1; i<10; i++) {
+      numIn = numIn * numStepen.value;
+    } 
+    alert (numIn);
+  }
+</script>
+
+    <script src="dz2.js"></script>   
+</body>
+</html>
