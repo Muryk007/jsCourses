@@ -281,25 +281,14 @@ summaChisel.onclick = function () {
         let i = 0;
         for (i=0; i<3; i++) {
             let otgadka = prompt ('Введите ответ');
-            
-            
-            /*if (otgadka ='Сдаюсь') {
+                        
+            if (otgadka =='Сдаюсь') {
                 break;
-            } else if (otgadka = "Троллейбус") {
+            } else if (otgadka == "Троллейбус") {
               alert ('Это провильный овет');
               break;
             } else {
               alert ('Подумайте еще');
-            };*/
-            switch (otgadka) {
-                case 'Троллейбус':
-                    console.log ('Правильно!');
-                    break;
-                case 'Сдаюсь':
-                    console.log ('Ваше право!');
-                    break;
-                default:
-                    console.log ('Подумайте еще!');
             };
         };    
     };
