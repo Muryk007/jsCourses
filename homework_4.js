@@ -1,4 +1,4 @@
-"use strict"
+""use strict"
 
 // Ex 1
 //1
@@ -16,18 +16,11 @@ function mathTwo (numFirst) {
 }
 mathTwo ();
 //3
-function count () {
-    firstNum = +prompt ('Enter first number');
-    secondNum = +prompt ('Enter second number');
+function mathThree (count) {
+    second = count + count*2;
+    alert(second);
 }
-count ();
-
-function mathTree (count) {
-    first = prompt ('Enter the number');
-    second = count + first;
-    alert(typeof second);
-}
-mathTree ();
+mathThree (5);
 //4
 function division (div1, div2) {
     div1 = +prompt ('Enter first number');
@@ -78,15 +71,22 @@ function countNotEvenNumbers () {
 countNotEvenNumbers ();
 
 //2
+function findMaxEvenNumber () {
+    let inputNumber = prompt ('');
+    let maxEven = 0;
 
+    for (let value of inputNumber) {
+        let temp = Number (value);
+        if (temp % 2 == 0) {
+            maxEven = temp
+        }
+    } alert (maxEven);
+}
+findMaxEvenNumber ();
 //3
 
 //4
-let firstNum = 10;
-let secondNum = 5;
-let thirdNum = 8.25;
-
-function findMaxNum () {
+function findMaxNum (firstNum,secondNum,thirdNum) {
 
     if (firstNum > secondNum && firstNum > thirdNum) {
         alert (firstNum)
@@ -98,64 +98,68 @@ function findMaxNum () {
         alert ('try again')
     }
 }
-findMaxNum ();
+findMaxNum (5,2,20);
 
 //5
-let minNum = 1;
-let notMin = 2;
-let midleNum = 3;
-let bigNum = 4;
-let biggestNum = 5;
+function findMinNum (minNum,notMin,midleNum,bigNum,biggestNum) {
 
-function findMinNum () {
-
-    if (minNum > notMin && minNum > midleNum && minNum > bigNum && minNum > biggestNum) {
+    if (minNum < notMin && minNum < midleNum && minNum < bigNum && minNum < biggestNum) {
         alert (minNum)
-    } else if (notMin > minNum && notMin > midleNum && notMin > bigNum && notMin > biggestNum) {
+    } else if (notMin < minNum && notMin < midleNum && notMin < bigNum && notMin < biggestNum) {
         alert (notMin)
-    } else if (midleNum > minNum && midleNum > notMin && midleNum > bigNum && midleNum > biggestNum) {
+    } else if (midleNum < minNum && midleNum < notMin && midleNum < bigNum && midleNum < biggestNum) {
         alert (midleNum)
-    } else if (bigNum > minNum && bigNum > notMin && bigNum > midleNum && bigNum > biggestNum) {
+    } else if (bigNum < minNum && bigNum < notMin && bigNum < midleNum && bigNum < biggestNum) {
         alert (bigNum)
-    } else if (biggestNum > minNum && biggestNum > notMin && biggestNum > midleNum && biggestNum > bigNum) {
+    } else if (biggestNum < minNum && biggestNum < notMin && biggestNum < midleNum && biggestNum < bigNum) {
         alert (biggestNum)
     } else {
         alert ('try again')
     }
 }
-findMinNum ();
+findMinNum (1,2,3,4,5);
 
 //6 
-function typeTipeData () {
-    alert (typeof true);
-    alert (typeof 123);
-    alert (typeof 'hello');
-    alert (typeof null);
-    alert (typeof undefined);
-    alert (typeof Object);
+function typeTypeData (data) {
+    alert (typeof data);
 }
-typeTipeData ();
+
+typeTypeData (123);
+typeTypeData (true);
+typeTypeData ('123');
+typeTypeData (Object);
+typeTypeData (NaN);
+typeTypeData (Array);
+typeTypeData (undefined);
+
 
 //7
-function getDay () {
-    let dayOfWeek = prompt ('Введите номер дня недели');
-    
-    if (dayOfWeek == 1) {
+function getDayOfWeek (day) {
+        
+    if (day == 1) {
         alert ('Понедельник')
-    } else if (dayOfWeek == 2) {
+    } else if (day == 2) {
         alert ('Вторник')
-    } else if (dayOfWeek == 3) {
+    } else if (day == 3) {
         alert ('Среда')
-    } else if (dayOfWeek == 4) {
+    } else if (day == 4) {
         alert ('Четверг')
-    } else if (dayOfWeek == 5) {
+    } else if (day == 5) {
         alert ('Пятница')
-    } else if (dayOfWeek == 6) {
+    } else if (day == 6) {
         alert ('Суббота')
-    } else if (dayOfWeek == 7) {
+    } else if (day == 7) {
         alert ('Воскресенье')
     } else {
         alert ('Вы уверены?')
     }
+    
 }
-getDay ();
+function putDay (callback) {
+    let day = prompt ('Введите номер дня недели');
+    callback (day);
+    
+}
+putDay (getDayOfWeek);
+
+
