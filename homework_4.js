@@ -1,4 +1,4 @@
-""use strict"
+"use strict"
 
 // Ex 1
 //1
@@ -22,37 +22,37 @@ function mathThree (count) {
 }
 mathThree (5);
 //4
-function division (div1, div2) {
+function mathFour (div1, div2) {
     div1 = +prompt ('Enter first number');
     div2 = +prompt ('Enter second number');
     return (div1 / div2);
 }
-division ();
+mathFour ();
 
 
 // Ex 2
 //1
 let myName = prompt ('Enter your name'); 
 
-function nameConsole () {
+function putNameConsole () {
     console.log (myName);
 }
-nameConsole ();
+putNameConsole ();
 //2
 let nameAle = prompt ('Enter your name');
 
-function nameAlert () {
+function putNameAlert () {
     alert (nameAle);
 }
-nameAlert ();
+putNameAlert ();
 //3
 let firstName = prompt ('Enter your name')
 
-function nameConsAlert () {
+function putNameConsAlert () {
     console.log (firstName);
     alert (firstName);
 }
-nameConsAlert ();
+putNameConsAlert ();
 
 // Ex 3
 //1
@@ -84,7 +84,11 @@ function findMaxEvenNumber () {
 }
 findMaxEvenNumber ();
 //3
-
+function findLastNumber (lastNum) {
+    lastNum = lastNum % 10;
+    alert (lastNum);
+}
+findLastNumber (456);
 //4
 function findMaxNum (firstNum,secondNum,thirdNum) {
 
@@ -161,5 +165,3 @@ function putDay (callback) {
     
 }
 putDay (getDayOfWeek);
-
-
