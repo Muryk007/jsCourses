@@ -2,32 +2,35 @@
 
 // Ex 1
 //1
-function mathOne (firstNum, secondNum) {
+function subtraction (firstNum, secondNum) {
     firstNum = +prompt ('Enter first number');
     secondNum = +prompt ('Enter second number');
     alert (firstNum - secondNum);
+    return;
 }
-mathOne ();
+subtraction ();
 //2
-function mathTwo (numFirst) {
+function multiplication (numFirst) {
     numFirst = +prompt ('Enter first number');
     numSecond = numFirst*numFirst;
     alert (numSecond);
+    return;
 }
-mathTwo ();
+multiplication ();
 //3
-function mathThree (count) {
+function addition (count) {
     second = count + count*2;
     alert(second);
+    return;    
 }
-mathThree (5);
+addition (5);
 //4
-function mathFour (div1, div2) {
-    div1 = +prompt ('Enter first number');
-    div2 = +prompt ('Enter second number');
-    return (div1 / div2);
+function division (numOne, numTwo) {
+    numOne = +prompt ('Enter first number');
+    numTwo = +prompt ('Enter second number');
+    return (numOne / numTwo);
 }
-mathFour ();
+division ();
 
 
 // Ex 2
@@ -58,14 +61,14 @@ putNameConsAlert ();
 //1
 function countNotEvenNumbers () {
     let nums = prompt ("number?");
-    let sumChi = 0;
+    let sum = 0;
 
     for (let value of nums) {
         let temp = Number (value);
         if (temp%2 != 0) {
-            sumChi +=temp
+            sum +=temp
         }
-    } alert (sumChi);
+    } alert (sum);
 
 }
 countNotEvenNumbers ();
