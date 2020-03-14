@@ -1,0 +1,93 @@
+"use strict"
+
+let arr = [12, 13, 15, 19, 20, 245];
+
+function isBigEnough(element, index, arr) {
+    return element >= 10;
+}
+
+arr.every(isBigEnough);
+let arr2 = [1, 2, 3, 4, 2];
+
+function isBigEnough(element, index, arr2) {
+    return index >= 10;
+}
+
+arr2.every(isBigEnough);
+
+
+/*arr.push(155);
+for (let index = 0; index < arr.length; index++) {
+    console.log(arr[index]);
+}*/
+let arr2 = [1, 2, 3, 4, 2];
+
+function isBigEnough(element, index, arr2) {
+    return element >= 10;
+}
+
+arr2.every(isBigEnough);
+//console.log(arr2.slice(1,3));
+let arr3 = arr.concat(arr2);
+
+console.log(arr3);
+console.log(arr3.fill('0', 4, 6))
+
+let nameArr = ['John', 'Minor'];
+console.log(nameArr.join);
+const reversed = nameArr.reverse();
+console.log(reversed);
+
+
+
+let arr2 = [1, 2, 3, 4, 2];
+//function isBigEnough (element, index, arr2) {
+//    return element >= 10;
+//}
+
+
+function isFive(elem) {
+    let a = elem > 5;
+    return true;
+}
+
+
+function every(arr2, index) {
+    for (let index = 0; index < arr2.length; index++) {
+        if (!isFive(arr2[index])) {
+            return false;
+        }
+    }
+    return true;
+}
+
+every(isFive);
+
+let arr2 = [1, 2, 3, 4, 2];
+
+function isBigEnough(value) {
+    return value <= 4;
+}
+
+function filtered(arr2) {
+    let filt = [1, 5, 4].filter(isBigEnough);
+    return arr2;
+}
+filtered(isBigEnough);
+
+let arr4 = [212, 343, 5454, 6565, 343];
+arr4.forEach(function(element) {
+    console.log(element);
+})
+
+let tens = [1, 1, 1, 1];
+let getTens = tens.map(function(elem) {
+    return elem + 9;
+
+});
+alert(getTens);
+
+// .includes
+// .reduce/reduceRight
+// .every/some
+// .keys
